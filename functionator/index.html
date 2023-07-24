@@ -30,24 +30,31 @@
       document.addEventListener("keydown",function(e){
         e.preventDefault();
         let keyC = e.keyCode;
+        //left arrow
         if(keyC === 37){
            addFun("left");
         }
+        //right arrow
         else if(keyC === 39){
           addFun("right");      
         }
+        //up arrow
         else if(keyC === 38){
           addFun("up");      
         }
+        //down arrow
         else if(keyC === 40){
           addFun("down");      
         }
+        // c on keyboard  
         else if(keyC === 67){
           myBlock.style.backgroundColor = randomcolor();   
         }
+        //enter or space
         else if(keyC === 13 || keyC === 32){
           mover();
         }
+        //r on keyboard
         else if(keyC === 82){
           let temp = movementArray[Math.floor(Math.random()*movementArray.length)];
           addFun(temp);
